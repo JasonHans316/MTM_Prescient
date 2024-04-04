@@ -211,50 +211,6 @@ public class Program
         }
     }
 
-    private static bool CheckDatabaseExists(SqlConnection connection, string databaseName)
-    {
-        string sqlCreateDBQuery;
-
-        try
-        {
-
-            //Connect to the local, default instance of SQL Server.   
-            Server srv = new Server();
-            //Define a Database object variable by supplying the server and the database name arguments in the constructor.
-
-            if (!srv.Databases.Contains(databaseName))
-            { 
-                Database db = new Database(srv, "Test_SMO_Database");
-            }
-
-            //sqlCreateDBQuery = string.Format("SELECT database_id FROM sys.databases WHERE Name = '{0}'", databaseName);
-    
-            //using (connection)
-            //{
-            //    using (SqlCommand sqlCmd = new SqlCommand(sqlCreateDBQuery, connection))
-            //    {
-            //        using (var command = new SqlCommand($"SELECT db_id('{databaseName}')", connection))
-            //        {
-            //            connection.Open();
-            //            return (command.ExecuteScalar() != DBNull.Value);
-            //        }
-            //    }
-            //}
-        }
-        catch (System.Exception ex)
-        {
-            Console.Error.WriteLine("Failed to search for database DATABASE " + databaseName);
-        }
-        finally
-        {
-            if (connection.State == ConnectionState.Open)
-            {
-                connection.Close();
-            }
-        }
-        return false;
-    }
-
     private static void ProcessExampleFile(string filePath)
     {
         SqlConnection myConn = new SqlConnection("Server=localhost;Integrated security=SSPI;database=master");
