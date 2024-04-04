@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTM_Fetch", "MTM_Fetch.csproj", "{E12A0D9B-0B32-44E0-88C6-A5D15A2AB7BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E12A0D9B-0B32-44E0-88C6-A5D15A2AB7BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E12A0D9B-0B32-44E0-88C6-A5D15A2AB7BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E12A0D9B-0B32-44E0-88C6-A5D15A2AB7BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E12A0D9B-0B32-44E0-88C6-A5D15A2AB7BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2170F335-36F2-4C82-A057-130E419A9954}
+	EndGlobalSection
+EndGlobal
