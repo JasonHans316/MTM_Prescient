@@ -8,6 +8,7 @@ using System.Net;
 using System.Runtime.InteropServices;
 using Microsoft.SqlServer.Management.Smo;
 using Server = Microsoft.SqlServer.Management.Smo.Server;
+using System.Globalization;
 
 public class Program
 {
@@ -242,11 +243,11 @@ public class Program
         var files = Directory.EnumerateFiles(folderPath).ToList();
         foreach (var file in files)
 {
-            int year = Int32.Parse(file.Substring(0, 4));
-            int month = Int32.Parse(file.Substring(4, 2));
-            int day = Int32.Parse(file.Substring(6, 2));
+            //int year = Int32.Parse(file.Substring(0, 4));
+            //int month = Int32.Parse(file.Substring(4, 2));
+            //int day = Int32.Parse(file.Substring(6, 2));
 
-            DateTime fileDate = new DateTime(year, month, day);
+            DateTime fileDate = DateTime.ParseExact(file.Substring(0,8), "YYYYMMdd", CultureInfo.InvariantCulture);
 
             Excel.Application xcl_Application = new Excel.Application();
             Excel.Workbook xcl_workBook = xcl_Application.Workbooks.Open(file);
